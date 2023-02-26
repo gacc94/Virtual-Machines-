@@ -1,0 +1,8 @@
+Centos 6.7
+	Hostname 		: Centos
+	constraseña root: 123456
+	
+	Nombre de usuario: gacc94
+	Nombre Completo	: GACC94
+	contraseña : 123456
+	

@@ -1,0 +1,11 @@
+Centos 7.9 (minimal)
+	NAT IP      : 192.168.154.130
+	BRIDGE IP   : 192.168.0.15
+	
+	Hostname 		: root
+	constraseña root: 123456
+	
+	Nombre usuario 	: gacc94
+	Nombre Completo 	: GACC94
+	contraseña		: 123456 	
+	
