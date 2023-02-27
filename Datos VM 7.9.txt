@@ -7,5 +7,11 @@ Centos 7.9 (minimal)
 	
 	Nombre usuario 	: gacc94
 	Nombre Completo 	: GACC94
-	contraseña		: 123456 	
+	contraseña		: 123456
+
+	Versiones:
+	PHP : 7.0.33CLI
+	Apache: 2.4.6
+
+
 	
