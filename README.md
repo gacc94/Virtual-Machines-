@@ -120,3 +120,7 @@ cat ~/.ssh/id_rsa.pub
 ~~~
 cat ~/.ssh/id_rsa.pub > mi_clave_ssh.txt
 ~~~
+* Copiar clave ssh a un archivo txt
+~~~
+sudo ss -tlnp | grep sshd
+~~~

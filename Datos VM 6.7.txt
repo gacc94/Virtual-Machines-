@@ -1,8 +1,11 @@
 Centos 6.7
-	Hostname 		: Centos
+	Hostname 		: root
 	constraseña root: 123456
 	
 	Nombre de usuario: gacc94
 	Nombre Completo	: GACC94
 	contraseña : 123456
 	
+    Versiones:
+	PHP : 5.3
+	Apache: 2.2.15
