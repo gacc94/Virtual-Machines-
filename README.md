@@ -142,3 +142,8 @@ cat ~/.ssh/id_rsa.pub > mi_clave_ssh.txt
 ~~~
 sudo ss -tlnp | grep sshd
 ~~~
+* Habilitar ssh en el servidor
+~~~
+sudo systemctl enable sshd
+~~~
+
