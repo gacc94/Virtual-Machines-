@@ -59,6 +59,24 @@ sudo firewall-cmd --zone=public --permanent --add-service=http
 sudo firewall-cmd --zone=public --permanent --add-service=https
 sudo firewall-cmd --reload
 ~~~
+### OTRAS INSTALACIONES
+1. Verifica qué firewall está instalado en tu servidor. Puedes hacerlo con el siguiente comando en la terminal:
+~~~
+sudo firewall-cmd --state
+~~~
+2. Si estás utilizando firewalld, puedes permitir el tráfico ICMP agregando una regla al firewall:
+~~~
+sudo firewall-cmd --zone=public --add-icmp-block-inversion
+sudo firewall-cmd --zone=public --add-icmp-block=echo-request
+sudo firewall-cmd --permanent --zone=public --add-icmp-block-inversion
+sudo firewall-cmd --permanent --zone=public --add-icmp-block=echo-request
+~~~
+3. Reinicia el firewall para aplicar los cambios:
+~~~
+sudo firewall-cmd --reload
+~~~
+
+
 ### OTROS COMANDOS
 * Revisar estado de apache:
 ~~~
