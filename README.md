@@ -147,3 +147,19 @@ sudo ss -tlnp | grep sshd
 sudo systemctl enable sshd
 ~~~
 
+# PERMISOS PARA REALIZAR PING DESDE PHP
+
+1. Instala el paquete iputils utilizando el siguiente comando:
+~~~
+sudo yum install iputils
+~~~
+2. Abre el archivo de configuración de SELinux utilizando el siguiente comando:
+~~~
+vi nano /etc/selinux/config
+~~~
+4. Busca la línea que dice SELINUX=enforcing y cámbiala a SELINUX=permissive.
+5. Guarda y cierra el archivo.
+6. Utiliza el siguiente comando para reiniciar el servidor:
+~~~
+sudo reboot
+~~~
