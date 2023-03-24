@@ -163,3 +163,72 @@ vi nano /etc/selinux/config
 ~~~
 sudo reboot
 ~~~
+
+# PASOS PARA LA CONEXION SSH USER/GROUP apache  A OTOR SERVIDORES
+
+1. Crear par de claves privada/publica para el usuario apache
+~~~
+sudo -u apache ssh-keygen
+~~~
+* Este comando creará las claves ssh en la ruta: /usr/share/httpd/ .ssh/id_rsa 
+* Si no  existe la carpeta .ssh , se tendrá que crear 
+* Ingresar a la ruta: /usr/share/httpd, ejecutar el comando:
+~~~
+mkdir .ssh/
+~~~
+2. Utiliza el siguiente comando para cambiar los permisos de la carpeta /usr/share/httpd/ .ssh/
+~~~
+chmod 777 /usr/share/httpd/ .ssh/
+~~~
+~~~
+chmod 666 /usr/share/httpd/ .ssh/
+~~~
+~~~
+chmod 700 /usr/share/httpd/ .ssh/
+~~~
+3. Utiliza el siguiente comando para generar una nueva clave SSH para el usuario apache:
+~~~
+sudo -u apache ssh-keygen
+~~~
+* Este comando generará un nuevo par de claves SSH en la carpeta .ssh del usuario apache.
+4. Una vez que se haya generado la clave SSH, utiliza el siguiente comando para agregar la clave pública a la lista de claves autorizadas del usuario apache en el servidor remoto:
+~~~
+sudo -u apache ssh-copy-id user@remote_host
+~~~
+### OTROS COMANDOS
+* Instalar vim
+~~~
+sudo yum install vim -y
+~~~
+* Instalar htop
+~~~
+sudo yum install htop -y
+~~~
+
+# 2DA FORMA DE ESTABLECER CONEXION SSH USER/GROUP apache  A OTOR SERVIDORES
+1. Utiliza el siguiente comando para crear una carpeta .ssh en el directorio de inicio del usuario apache:
+~~~
+mkdir -p /home/apache/.ssh
+~~~
+2. Utiliza el siguiente comando para cambiar el propietario de la carpeta .ssh al usuario apache:
+~~~
+chown apache:apache /home/apache/.ssh
+~~~
+3. Utiliza el siguiente comando para cambiar los permisos de la carpeta .ssh:
+~~~
+chmod 700 /home/apache/.ssh
+~~~
+4. Utiliza el siguiente comando para generar una nueva clave SSH para el usuario apache:
+~~~
+sudo -u apache ssh-keygen
+~~~
+
+
+
+
+
+
+
+
+
+
